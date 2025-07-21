@@ -1,12 +1,29 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Web3Bridge React DApp
 
-Currently, two official plugins are available:
+This project is a simple decentralized application (DApp) built with React and Vite. It allows users to interact with an Ethereum smart contract to set and get a message using MetaMask and ethers.js.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Connects to MetaMask for Ethereum transactions
+- Set a message on a deployed smart contract
+- Fetch and display the current message from the contract
+- Responsive and modern UI styled with Tailwind CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+3. Open your browser at [http://localhost:5173](http://localhost:5173) (or the port shown in your terminal).
+
+## Usage
+
+1. Make sure MetaMask is installed and connected to the correct network.
+2. Enter a message in the input field and click **Set Message** to store it on the blockchain.
+3. Click **Get Message** to fetch and display the current message stored in the contract.
