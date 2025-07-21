@@ -61,36 +61,38 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-green-100 px-4">
-      <div className="bg-white rounded-2xl shadow-lg p-8 w-full max-w-md flex flex-col items-center">
-        <h1 className="text-2xl md:text-3xl font-bold text-green-700 mb-6 text-center">Set Message on Smart Contract</h1>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 via-sky-100 to-emerald-200 px-4">
+      <div className="bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl p-8 w-full max-w-lg flex flex-col items-center border border-emerald-100">
+        <h1 className="text-3xl md:text-4xl font-extrabold text-emerald-700 mb-8 text-center tracking-tight drop-shadow-sm">Set Message on Smart Contract</h1>
         <input
           type="text"
-          placeholder="Set message"
+          placeholder="Type your message..."
           value={text}
           onChange={(e) => {
             setText(e.target.value);
             setMessage("");
           }}
-          className="w-full px-4 py-2 mb-4 border-2 border-green-300 rounded-lg focus:outline-none focus:border-green-500 text-lg transition"
+          className="w-full px-5 py-3 mb-6 border-2 border-emerald-200 rounded-xl focus:outline-none focus:border-emerald-500 text-lg shadow-sm transition-all duration-200 bg-emerald-50/60 placeholder:text-emerald-400"
+          autoFocus
         />
-        <div className="flex w-full gap-4">
+        <div className="flex w-full gap-4 mb-2">
           <button
             onClick={handleSet}
-            className="flex-1 bg-green-600 hover:bg-gray-700 text-white font-semibold py-2 rounded-lg text-lg shadow transition"
+            className="flex-1 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-bold py-2.5 rounded-xl text-lg shadow-md transition-all duration-200 focus:ring-2 focus:ring-emerald-300 focus:ring-offset-2"
           >
             Set Message
           </button>
           <button
             onClick={getMessage}
-            className="flex-1 bg-red-600 hover:bg-wine-700 text-white font-semibold py-2 rounded-lg text-lg shadow transition"
+            className="flex-1 bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-600 hover:to-sky-700 text-white font-bold py-2.5 rounded-xl text-lg shadow-md transition-all duration-200 focus:ring-2 focus:ring-sky-300 focus:ring-offset-2"
           >
             Get Message
           </button>
         </div>
         {message && (
-          <div className="w-full mt-6 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-center break-words">
-            <span className="font-semibold">Current Message:</span> {message}
+          <div className="w-full mt-8 p-5 bg-gradient-to-br from-emerald-100 via-white to-emerald-50 border border-emerald-200 rounded-xl text-emerald-800 text-center break-words shadow-inner animate-fade-in">
+            <span className="font-semibold text-emerald-700">Current Message:</span>
+            <div className="mt-2 text-lg font-mono text-emerald-900">{message}</div>
           </div>
         )}
       </div>
