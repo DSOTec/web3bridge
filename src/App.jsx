@@ -14,9 +14,7 @@ function App() {
   }
     
 
-  
 
-  // Fetch message from contract
   const getMessage = async () => {
     try {
       if (window.ethereum) {
@@ -32,7 +30,7 @@ function App() {
     }
   };
 
-  // Set message and fetch after transaction
+  
   const handleSet = async () => {
     try {
       if (!text) {
